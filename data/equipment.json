@@ -1,0 +1,47 @@
+{
+  "building_1::Building 1": {
+    "type": "Building",
+    "status": "N/A",
+    "description": "Top-level building node."
+  },
+  "building_1::CNC ?": {
+    "type": "Machine",
+    "status": "Unknown",
+    "description": "Update this label or metadata in data/equipment.json."
+  },
+  "building_2::Building 2": {
+    "type": "Building",
+    "status": "N/A",
+    "description": "Top-level building node."
+  },
+  "building_2::EDM": {
+    "type": "Machine",
+    "status": "Unknown",
+    "description": "Starter metadata entry."
+  },
+  "building_2::Compressor": {
+    "type": "Machine",
+    "status": "Unknown",
+    "description": "Starter metadata entry."
+  },
+  "building_2::Tumbler": {
+    "type": "Machine",
+    "status": "Unknown",
+    "description": "Starter metadata entry."
+  },
+  "building_3::Building 3": {
+    "type": "Building",
+    "status": "N/A",
+    "description": "Top-level building node."
+  },
+  "building_3::Haas VF4": {
+    "type": "Machine",
+    "status": "Unknown",
+    "description": "Starter metadata entry."
+  },
+  "building_3::Okuma": {
+    "type": "Machine",
+    "status": "Unknown",
+    "description": "Two nodes in this SVG currently share this label; rename in draw.io for unique metadata keys."
+  }
+}
