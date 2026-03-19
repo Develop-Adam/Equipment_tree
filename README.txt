@@ -1,35 +1,29 @@
-Equipment Tree Viewer - Modular Rev 1
+Equipment Tree Viewer - Rev 1.1 (ID-based mapping)
 
 What changed:
-- Buildings are defined in data/buildings.json
-- Right-panel metadata is defined in data/equipment.json
-- Each building uses its own SVG file in the svg/ folder
-- The site code is separated into index.html, assets/style.css, and assets/app.js
+- Equipment metadata is now keyed by SVG element ID instead of visible text.
+- This makes the app stable even if you rename labels in draw.io.
+- Right panel shows both the visible label and the SVG ID for the clicked node.
 
-Important:
-Open this site through a small local web server.
-Do not double-click index.html directly, because browsers often block loading local JSON/SVG files.
+How to run:
+1. Double-click start_server.bat
+2. Open http://localhost:8000 in your browser
 
-Windows quick start:
-1. Open this folder in File Explorer.
-2. Double-click start_server.bat
-3. Open http://localhost:8000 in your browser.
-
-How to add a new building:
-1. Export a new SVG from draw.io into the svg/ folder.
-2. Add a new row to data/buildings.json:
-   {
-     "id": "building_4",
-     "name": "Building 4",
-     "svg": "svg/Building_4.drawio.svg"
-   }
+How to add a building:
+1. Export a new SVG into the svg folder.
+2. Add one row to data/buildings.json.
 3. Refresh the page.
 
-How to add or update item details:
-1. Click an item in the viewer.
-2. Copy the data key shown in the right panel.
-3. Add or edit that key in data/equipment.json.
+How to add equipment metadata:
+1. Click a node in the app.
+2. Copy the shown Data key or SVG ID.
+3. Add/update that key in data/equipment.json.
 
-Notes:
-- If two items in the same building have the exact same visible label, they will share the same metadata key.
-- To make them unique, rename them in draw.io before exporting SVG.
+Key format:
+  building_id::svg_element_id
+Example:
+  building_2::qB1-vgkHPpZSQpjzEzUW-9
+
+Important note:
+- You can safely change visible text labels in draw.io now.
+- If draw.io regenerates new element IDs during a major redraw, update the corresponding entries in data/equipment.json.
